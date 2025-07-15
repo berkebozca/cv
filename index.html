@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Berke Bozca CV</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9fb;
+    margin: 0;
+    padding: 40px;
+    color: #222;
+  }
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    display: flex;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  /* Left side */
+  .left {
+    background: #f0e9ff;
+    flex: 1.8;
+    padding: 40px 50px;
+
+    /* Başlangıç animasyon durumu */
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: slideInLeft 1s ease forwards;
+  }
+  .left h2 {
+    background: #dcd3f9;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #4b3db9;
+    letter-spacing: 0.05em;
+  }
+  .left h2:first-of-type {
+    margin-top: 0;
+  }
+  .education, .about-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+  }
+  /* Right side */
+  .right {
+    background: white;
+    flex: 1;
+    padding: 40px 30px;
+    border-left: 2px solid #e3dfff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    /* Başlangıç animasyon durumu */
+    transform: translateX(50px);
+    opacity: 0;
+    animation: slideInRight 1s ease forwards;
+  }
+  .name {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+    text-align: center;
+  }
+  .position {
+    font-size: 16px;
+    color: #555;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .section-title {
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 10px;
+    letter-spacing: 0.07em;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+
+    /* Hover büyüme geçişi */
+    transition: transform 0.3s ease;
+  }
+  .contact-item svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    fill: #4b3db9;
+    flex-shrink: 0;
+  }
+  .contact-text {
+    word-break: break-word;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+  }
+  li {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #333;
+
+    /* Hover büyüme geçişi */
+    transition: transform 0.3s ease;
+  }
+  /* Hover büyüme */
+  .job:hover, .education:hover, .certificate li:hover, .skills li:hover, .languages li:hover, .contact-item:hover, .profile-photo:hover, li:hover {
+    transform: scale(1.03);
+  }
+  /* Animasyon keyframes */
+  @keyframes slideInLeft {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInRight {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h2>ABOUT ME</h2>
+      <p class="about-text">
+        I am a second-year Computer Science student interested in software development and cyber security. I hold certificates in C programming language and cyber security fundamentals. I aim to develop my analytical thinking and problem-solving skills to build a career in the technology sector.
+      </p>
+
+      <h2>EDUCATION</h2>
+      <div class="education">
+        <strong>Dokuz Eylül University</strong><br />
+        Computer Science, 2nd Year
+      </div>
+    </div>
+
+    <div class="right">
+      <h1 class="name">Berke Bozca</h1>
+      <div class="position">Computer Science Student</div>
+
+      <div>
+        <div class="section-title">CONTACT</div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.466 15.466 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.54 1.13 1 1 0 01.89 1v3.5a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 .89 11.36 11.36 0 001.13 3.54 1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>
+          <span class="contact-text">+90 554 159 8260</span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16z"/></svg>
+          <span class="contact-text">berkebozca@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+          <span class="contact-text">Antalya, Turkey</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-title">CERTIFICATES</div>
+        <ul>
+          <li>Cyber Security Certificate</li>
+          <li>C Programming Language Certificate</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="section-title">SKILLS</div>
+        <ul>
+          <li>C Programming</li>
+          <li>Analytical Thinking</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="section-title">LANGUAGES</div>
+        <ul>
+          <li>English B2</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
